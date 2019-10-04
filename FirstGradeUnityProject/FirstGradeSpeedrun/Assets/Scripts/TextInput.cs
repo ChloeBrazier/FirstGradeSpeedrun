@@ -23,6 +23,8 @@ public class TextInput : MonoBehaviour
     {
         //get text input component
         mathInput = gameObject.GetComponent<InputField>();
+
+        //
     }
 
     // Update is called once per frame
@@ -30,4 +32,6 @@ public class TextInput : MonoBehaviour
     {
         
     }
+
+
 }
