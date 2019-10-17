@@ -31,7 +31,7 @@ public class MathProblem : MonoBehaviour
         }
         else
         {
-            problemText.text = AdditionProblem();
+            problemText.text = SubtractionProblem();
         }
     }
 
@@ -42,9 +42,9 @@ public class MathProblem : MonoBehaviour
     }
 
     /// <summary>
-    /// method that creates  random addition problem to solve 
+    /// method that creates a random addition problem to solve 
     /// </summary>
-    /// <returns></returns>
+    /// <returns> the string that will be displayed for the problem</returns>
     private string AdditionProblem()
     {
         //random numbers to generate addition string
@@ -60,9 +60,44 @@ public class MathProblem : MonoBehaviour
         return addProblem;
     }
 
-    private void AdditionSolution(int numOne, int NumTwo)
+    /// <summary>
+    /// method that sets this problem's answer value based on the numbers in the problem
+    /// </summary>
+    /// <param name="numOne"> the first number of the problem </param>
+    /// <param name="numTwo"> the second number of the problem </param>
+    private void AdditionSolution(int numOne, int numTwo)
     {
         //set problem solution to the sum of passed-in numbers
-        problemSolution = numOne + NumTwo;
+        problemSolution = numOne + numTwo;
+    }
+
+    /// <summary>
+    /// method that creates a random subtraction problem to solve 
+    /// </summary>
+    /// <returns> the string that will be displayed for the problem</returns>
+    private string SubtractionProblem()
+    {
+        //random numbers to generate addition string
+        int numOne = Random.Range(0, 10);
+        int numTwo = Random.Range(0, 10);
+
+        //create string for the math problem
+        string addProblem = numOne + " - " + numTwo + " = ";
+
+        //get the solution to the problem
+        SubtractionSolution(numOne, numTwo);
+
+        return addProblem;
+    }
+
+    /// <summary>
+    /// method that sets this problem's answer value based on the numbers in the problem
+    /// </summary>
+    /// <param name="numOne"> the first number of the problem </param>
+    /// <param name="numTwo"> the second number of the problem </param>
+    private void SubtractionSolution(int numOne, int numTwo)
+    {
+        //set problem solution to the sum of passed-in numbers
+        problemSolution = numOne - numTwo;
     }
 }

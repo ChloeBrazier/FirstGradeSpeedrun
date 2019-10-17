@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class TextInput : MonoBehaviour
 {
     //field for the textinput ui component of the GameObject
-    private InputField mathInput;
+    private Text mathInput;
 
     //field for the string being held in the input field and the int to parse it to
     private string inputString;
@@ -22,9 +22,7 @@ public class TextInput : MonoBehaviour
     void Start()
     {
         //get text input component
-        mathInput = gameObject.GetComponent<InputField>();
-
-        //
+        mathInput = gameObject.GetComponent<Text>();
     }
 
     // Update is called once per frame
